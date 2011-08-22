@@ -1,0 +1,53 @@
+﻿<phone:PhoneApplicationPage x:Class="Petroledger.AddOrEditFillupEntry" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone" xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:Converters="clr-namespace:Petroledger.Converters" xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit" FontFamily="{StaticResource PhoneFontFamilyNormal}" FontSize="{StaticResource PhoneFontSizeNormal}" Foreground="{StaticResource PhoneForegroundBrush}" SupportedOrientations="Portrait" Orientation="Portrait" mc:Ignorable="d" d:DesignHeight="696" d:DesignWidth="480" shell:SystemTray.IsVisible="True" d:DataContext="{d:DesignData SampleData/FillupEntrySampleData.xaml}">
+
+	<phone:PhoneApplicationPage.Resources>
+		<Converters:OdometerToStringConverter x:Key="OdometerToStringConverter" />
+		<Converters:FillAmountToStringConverter x:Key="FillAmountToStringConverter" />
+		<Converters:PriceToStringConverter x:Key="PriceToStringConverter" />
+	</phone:PhoneApplicationPage.Resources>
+    
+	<!--LayoutRoot is the root grid where all page content is placed-->
+	<Grid x:Name="LayoutRoot" Background="Transparent">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto" />
+			<RowDefinition Height="*" />
+		</Grid.RowDefinitions>
+
+		<!--TitlePanel contains the name of the application and page title-->
+		<StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
+			<TextBlock x:Name="ApplicationTitle" Text="PETROLEDGER" Style="{StaticResource PhoneTextNormalStyle}" />
+			<TextBlock x:Name="PageTitle" Text="{Binding Path=PageHeader}" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}" />
+			<TextBlock x:Name="VehicleHeader" Text="{Binding Path=Vehicle.VehicleName}" Margin="10,-5,0,0" Foreground="{StaticResource PhoneSubtleBrush}" FontSize="{StaticResource PhoneFontSizeLarge}" />
+			<TextBlock x:Name="MissedEntryLabel" Text="{Binding Path=MissedEntryLabel}" Margin="9,-3,0,0" Foreground="{StaticResource PhoneAccentBrush}" />
+		</StackPanel>
+
+		<!--ContentPanel - place additional content here-->
+		<StackPanel x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+			<StackPanel Orientation="Vertical">
+				<TextBlock Text="entry date" Margin="15,0,0,0" />
+				<toolkit:DatePicker Name="EntryDatePicker" Value="{Binding Path=FillupEntry.EntryDate, Mode=TwoWay}" />
+				<TextBlock Text="odometer reading" Margin="15,0,0,0" />
+				<TextBox Name="TxtOdometerReading" Text="{Binding Path=FillupEntry.OdometerReading, Mode=TwoWay, Converter={StaticResource OdometerToStringConverter}}" InputScope="TelephoneNumber" HorizontalAlignment="Left" TextWrapping="NoWrap" Width="300" VerticalAlignment="Top" Margin="0,0,0,0" />
+				<StackPanel Orientation="Horizontal">
+					<StackPanel>
+						<TextBlock Text="fill amount" Margin="15,0,0,0" />
+                        <TextBox Name="TxtFillAmount" Text="{Binding Path=FillupEntry.FillAmount, Mode=TwoWay, Converter={StaticResource FillAmountToStringConverter}}" InputScope="TelephoneNumber" HorizontalAlignment="Left" TextWrapping="NoWrap" Width="220" VerticalAlignment="Top" Margin="0,0,0,0" />
+					</StackPanel>
+					<StackPanel>
+						<TextBlock Text="{Binding Path=PricePerUnitLabel}" Margin="15,0,0,0" />
+                        <TextBox Name="TxtPricePerUnit" Text="{Binding Path=FillupEntry.PricePerUnit, Mode=TwoWay, Converter={StaticResource PriceToStringConverter}}" InputScope="TelephoneNumber" HorizontalAlignment="Left" TextWrapping="NoWrap" Width="220" VerticalAlignment="Top" Margin="0,0,0,0" />
+					</StackPanel>
+				</StackPanel>
+				<CheckBox Content="not topped off" IsChecked="{Binding Path=FillupEntry.WasNotToppedOff, Mode=TwoWay}" Height="71" Name="chkNotToppedOff" />
+				<CheckBox Content="missed previous entry" IsChecked="{Binding Path=FillupEntry.PreviousEntryMissed, Mode=TwoWay}" Height="71" Name="chkMissedPreviousEntry" />
+			</StackPanel>
+		</StackPanel>
+	</Grid>
+
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="False">
+            <shell:ApplicationBarIconButton IconUri="/icons/appbar.save.rest.png" Text="submit" Click="OnSaveClicked" />
+            <shell:ApplicationBarIconButton IconUri="/icons/appbar.cancel.rest.png" Text="cancel" Click="OnCancelClicked" />
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
+</phone:PhoneApplicationPage>

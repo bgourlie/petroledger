@@ -1,0 +1,77 @@
+﻿<phone:PhoneApplicationPage xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone" xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls" mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="696" x:Class="Petroledger.MainPage" d:DataContext="{d:DesignData SampleData/MainViewModelSampleData.xaml}" FontFamily="{StaticResource PhoneFontFamilyNormal}" FontSize="{StaticResource PhoneFontSizeNormal}" Foreground="{StaticResource PhoneForegroundBrush}" SupportedOrientations="Portrait" Orientation="Portrait" shell:SystemTray.IsVisible="True" Loaded="OnPageLoaded">
+
+
+    <!--Data context is set to sample data above and LayoutRoot contains the root grid where all other page content is placed-->
+	<Grid x:Name="LayoutRoot" Background="Transparent">
+        
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto" />
+		</Grid.RowDefinitions>
+        
+        <Popup x:Name="SampleVehicleDialog" Height="250" Width="400" Margin="1" VerticalAlignment="Top" HorizontalAlignment="Center">
+            <Border BorderBrush="{StaticResource PhoneBorderBrush}" BorderThickness="1">
+                <StackPanel Background="{StaticResource PhoneBackgroundBrush}" Width="400">
+                    <TextBlock Padding="20,20,20,0" Style="{StaticResource PhoneTextLargeStyle}">Welcome to Petroledger!</TextBlock>
+                    <TextBlock Padding="20" TextWrapping="Wrap">Would you like to add sample vehicle data to evaluate all the functionality?  You can always delete it when you no longer need it.</TextBlock>
+                    <CheckBox Name="ChkDontShowSampleVehicleDialog" Content="don't show this again"/>
+                    <StackPanel Orientation="Horizontal">
+                        <Button Name="BtnYes" Content="Yes" Width="150" Click="BtnSampleVehicleDialog"/>
+                        <Button Name="BtnNo" Content="No" Width="150"  Click="BtnSampleVehicleDialog"/>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+        </Popup>
+        
+        <StackPanel Name="loadingProgressBar" Visibility="Collapsed">
+			<ProgressBar Height="4" VerticalAlignment="Top" Width="460" IsIndeterminate="True" />
+			<TextBlock HorizontalAlignment="Center">loading vehicles</TextBlock>
+		</StackPanel>
+		<StackPanel x:Name="LayoutNoVehicles" Visibility="Collapsed" Grid.Row="0" Margin="12,17,0,28">
+			<TextBlock x:Name="ApplicationTitle" Text="PETROLEDGER" Style="{StaticResource PhoneTextNormalStyle}" />
+			<TextBlock x:Name="PageTitle" Text="no vehicles" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}" />
+			<TextBlock TextWrapping="Wrap" Margin="9,0,0,0" Text="pull up the menu bar below to add a vehicle." FontSize="{StaticResource PhoneFontSizeMediumLarge}" />
+		</StackPanel>
+		<Grid Background="Transparent">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="Auto" />
+			</Grid.RowDefinitions>
+
+		</Grid>
+
+		<controls:Pivot Visibility="Collapsed" Name="PivotCars" Title="PETROLEDGER" ItemsSource="{Binding Path=VehiclePages}" Grid.Row="0" SelectionChanged="OnPivotItemChanged">
+			<controls:Pivot.HeaderTemplate>
+				<DataTemplate>
+					<TextBlock Text="{Binding Path=Vehicle.VehicleName}" />
+				</DataTemplate>
+			</controls:Pivot.HeaderTemplate>
+			<controls:Pivot.ItemTemplate>
+				<DataTemplate>
+					<StackPanel>
+						<TextBlock Text="{Binding Path=NotEnoughSampleDataLabel}" FontSize="{StaticResource PhoneFontSizeMedium}" TextWrapping="Wrap" />
+						<TextBlock Text="{Binding Path=AverageFuelEfficiencyLabel}" FontSize="{StaticResource PhoneFontSizeExtraLarge}" />
+						<TextBlock Text="{Binding Path=AverageCostEfficiencyLabel}" FontSize="{StaticResource PhoneFontSizeExtraLarge}" />
+						<TextBlock Text="{Binding Path=AnalysisDatesLabel}" FontSize="{StaticResource PhoneFontSizeSmall}" TextWrapping="Wrap" Style="{StaticResource PhoneTextSubtleStyle}" />
+                                                
+                        <!--<TextBlock Text="{Binding Path=AverageTimeBetweenFillups}" FontSize="{StaticResource PhoneFontSizeLarge}" />
+                        <TextBlock Text="{Binding Path=AverageDistanceDrivenBetweenFillups}" FontSize="{StaticResource PhoneFontSizeLarge}" />-->
+					</StackPanel>
+				</DataTemplate>
+			</controls:Pivot.ItemTemplate>
+		</controls:Pivot>
+
+	</Grid>
+
+	<phone:PhoneApplicationPage.ApplicationBar>
+		<shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+			<shell:ApplicationBarIconButton IconUri="/icons/appbar.newfillup.rest.png" Text="enter fill-up" Click="NewEntryClickEventHandler" />
+			<shell:ApplicationBarIconButton IconUri="/icons/appbar.entries.rest.png" Text="view entries" Click="ViewEntryClickEventHandler" />
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Text="add vehicle" Click="NewVehicleClickEventHandler" />
+                <shell:ApplicationBarMenuItem Text="edit vehicle" Click="EditVehicleClickEventHandler" />
+                <shell:ApplicationBarMenuItem Text="delete vehicle" Click="DeleteVehicleClickEventHandler" />
+            </shell:ApplicationBar.MenuItems>
+
+        </shell:ApplicationBar>
+        
+	</phone:PhoneApplicationPage.ApplicationBar>
+</phone:PhoneApplicationPage>

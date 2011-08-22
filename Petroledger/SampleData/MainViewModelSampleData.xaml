@@ -1,0 +1,106 @@
+﻿<ViewModels:MainViewModel xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:ViewModels="clr-namespace:Petroledger.ViewModels" xmlns:Model="clr-namespace:Petroledger.Data.Model">
+
+	<ViewModels:MainViewModel.VehiclePages>
+		<ViewModels:VehicleSummaryViewModel>
+			<ViewModels:VehicleSummaryViewModel.Vehicle>
+				<Model:Vehicle VehicleName="'05 odyssee" Make="Honda" Model="Odyssee" Year="2005" OdometerUnit="Mile">
+					<Model:Vehicle.Entries>
+						<Model:FillupEntry EntryDate="9/28/2005" FillAmount="14.136" OdometerReading="1008" PricePerUnit="2.759" PumpUnit="Gallon" OdometerUnit="Mile" />
+						<Model:FillupEntry EntryDate="9/30/2005" FillAmount="17.513" OdometerReading="1385" PricePerUnit="2.999" PumpUnit="Gallon" OdometerUnit="Mile" />
+						<Model:FillupEntry EntryDate="9/30/2005" FillAmount="7" OdometerReading="1548" PricePerUnit="2.999" PumpUnit="Gallon" OdometerUnit="Mile" />
+						<Model:FillupEntry EntryDate="10/16/2005" FillAmount="11.62" OdometerReading="1780" PricePerUnit="2.659" PumpUnit="Gallon" OdometerUnit="Mile" />
+						<Model:FillupEntry EntryDate="11/5/2005" FillAmount="15.002" OdometerReading="2127" PricePerUnit="2.399" PumpUnit="Gallon" OdometerUnit="Mile" />
+						<Model:FillupEntry EntryDate="11/7/2005" FillAmount="16.334" OdometerReading="2519" PricePerUnit="2.199" PumpUnit="Gallon" OdometerUnit="Mile" />
+						<Model:FillupEntry EntryDate="11/9/2005" FillAmount="11.589" OdometerReading="2755" PricePerUnit="2.389" PumpUnit="Gallon" OdometerUnit="Mile" />
+						<Model:FillupEntry EntryDate="11/17/2005" FillAmount="13.684" OdometerReading="3009" PricePerUnit="2.229" PumpUnit="Gallon" OdometerUnit="Mile" />
+						<Model:FillupEntry EntryDate="11/29/2005" FillAmount="17.254" OdometerReading="3336" PricePerUnit="2.199" PumpUnit="Gallon" OdometerUnit="Mile" />
+						<Model:FillupEntry EntryDate="12/31/2005" FillAmount="18.18" OdometerReading="3644" PricePerUnit="2.299" PumpUnit="Gallon" OdometerUnit="Mile" />
+						<Model:FillupEntry EntryDate="1/6/2006" FillAmount="14.84" OdometerReading="3977" PricePerUnit="2.399" PumpUnit="Gallon" OdometerUnit="Mile" />
+						<Model:FillupEntry EntryDate="1/17/2006" FillAmount="10.41" OdometerReading="4175" PricePerUnit="2.359" PumpUnit="Gallon" OdometerUnit="Mile" />
+						<Model:FillupEntry EntryDate="1/24/2006" FillAmount="16.575" OdometerReading="4534" PricePerUnit="2.359" PumpUnit="Gallon" OdometerUnit="Mile" />
+						<Model:FillupEntry EntryDate="2/1/2006" FillAmount="19.36" OdometerReading="4901" PricePerUnit="2.349" PumpUnit="Gallon" OdometerUnit="Mile" />
+						<Model:FillupEntry EntryDate="2/18/2006" FillAmount="13.998" OdometerReading="5151" PricePerUnit="2.299" PumpUnit="Gallon" OdometerUnit="Mile" />
+						<Model:FillupEntry EntryDate="2/19/2006" FillAmount="17.649" OdometerReading="5525" PricePerUnit="2.299" PumpUnit="Gallon" OdometerUnit="Mile" />
+						<Model:FillupEntry EntryDate="4/4/2006" FillAmount="16.497" OdometerReading="5803" PricePerUnit="2.659" PumpUnit="Gallon" OdometerUnit="Mile" />
+						<Model:FillupEntry EntryDate="4/16/2006" FillAmount="19.235" OdometerReading="6170" PricePerUnit="2.799" PumpUnit="Gallon" OdometerUnit="Mile" />
+						<Model:FillupEntry EntryDate="4/22/2006" FillAmount="16.47" OdometerReading="6553" PricePerUnit="2.899" PumpUnit="Gallon" OdometerUnit="Mile" />
+						<Model:FillupEntry EntryDate="5/9/2006" FillAmount="17.442" OdometerReading="6952" PricePerUnit="2.849" PumpUnit="Gallon" OdometerUnit="Mile" />
+						<Model:FillupEntry EntryDate="5/23/2006" FillAmount="15.108" OdometerReading="7215" PricePerUnit="2.859" PumpUnit="Gallon" OdometerUnit="Mile" />
+						<Model:FillupEntry EntryDate="6/7/2006" FillAmount="18" OdometerReading="7559" PricePerUnit="2.939" PumpUnit="Gallon" OdometerUnit="Mile" />
+						<Model:FillupEntry EntryDate="6/11/2006" FillAmount="18.19" OdometerReading="7980" PricePerUnit="2.959" PumpUnit="Gallon" OdometerUnit="Mile" />
+						<Model:FillupEntry EntryDate="7/9/2006" FillAmount="14.838" OdometerReading="8317" PricePerUnit="3.079" PumpUnit="Gallon" OdometerUnit="Mile" />
+						<Model:FillupEntry EntryDate="7/19/2006" FillAmount="15.151" OdometerReading="8654" PricePerUnit="3.079" PumpUnit="Gallon" OdometerUnit="Mile" />
+						<Model:FillupEntry EntryDate="8/6/2006" FillAmount="17.766" OdometerReading="9009" PricePerUnit="3.299" PumpUnit="Gallon" OdometerUnit="Mile" />
+						<Model:FillupEntry EntryDate="8/6/2006" FillAmount="11.202" OdometerReading="9209" PricePerUnit="3.299" PumpUnit="Gallon" OdometerUnit="Mile" />
+						<Model:FillupEntry EntryDate="8/9/2006" FillAmount="13.486" OdometerReading="9521" PricePerUnit="3.149" PumpUnit="Gallon" OdometerUnit="Mile" />
+						<Model:FillupEntry EntryDate="8/12/2006" FillAmount="18.326" OdometerReading="9855" PricePerUnit="3.139" PumpUnit="Gallon" OdometerUnit="Mile" />
+						<Model:FillupEntry EntryDate="8/16/2006" FillAmount="8.584" OdometerReading="10000" PricePerUnit="3.129" PumpUnit="Gallon" OdometerUnit="Mile" />
+						<Model:FillupEntry EntryDate="9/8/2006" FillAmount="17.724" OdometerReading="10391" PricePerUnit="2.699" PumpUnit="Gallon" OdometerUnit="Mile" />
+						<Model:FillupEntry EntryDate="9/19/2006" FillAmount="18.003" OdometerReading="10714" PricePerUnit="2.479" PumpUnit="Gallon" OdometerUnit="Mile" />
+						<Model:FillupEntry EntryDate="9/29/2006" FillAmount="13.803" OdometerReading="11013" PricePerUnit="2.359" PumpUnit="Gallon" OdometerUnit="Mile" />
+						<Model:FillupEntry EntryDate="10/1/2006" FillAmount="15.663" OdometerReading="11385" PricePerUnit="2.329" PumpUnit="Gallon" OdometerUnit="Mile" />
+						<Model:FillupEntry EntryDate="10/8/2006" FillAmount="16.4" OdometerReading="11749" PricePerUnit="2.256" PumpUnit="Gallon" OdometerUnit="Mile" />
+						<Model:FillupEntry EntryDate="10/20/2006" FillAmount="16.674" OdometerReading="12070" PricePerUnit="2.259" PumpUnit="Gallon" OdometerUnit="Mile" />
+						<Model:FillupEntry EntryDate="11/4/2006" FillAmount="14.084" OdometerReading="12325" PricePerUnit="2.259" PumpUnit="Gallon" OdometerUnit="Mile" />
+						<Model:FillupEntry EntryDate="11/17/2006" FillAmount="15.536" OdometerReading="12645" PricePerUnit="2.259" PumpUnit="Gallon" OdometerUnit="Mile" />
+						<Model:FillupEntry EntryDate="11/29/2006" FillAmount="18.16" OdometerReading="12986" PricePerUnit="2.259" PumpUnit="Gallon" OdometerUnit="Mile" />
+						<Model:FillupEntry EntryDate="11/30/2006" FillAmount="10.174" OdometerReading="13207" PricePerUnit="2.259" PumpUnit="Gallon" OdometerUnit="Mile" />
+						<Model:FillupEntry EntryDate="12/24/2006" FillAmount="16.71" OdometerReading="13507" PricePerUnit="2.359" PumpUnit="Gallon" OdometerUnit="Mile" />
+						<Model:FillupEntry EntryDate="1/1/2007" FillAmount="11.23" OdometerReading="13708" PricePerUnit="2.279" PumpUnit="Gallon" OdometerUnit="Mile" />
+						<Model:FillupEntry EntryDate="1/8/2007" FillAmount="16.333" OdometerReading="14089" PricePerUnit="2.299" PumpUnit="Gallon" OdometerUnit="Mile" />
+						<Model:FillupEntry EntryDate="1/26/2007" FillAmount="14.37" OdometerReading="14330" PricePerUnit="2.159" PumpUnit="Gallon" OdometerUnit="Mile" />
+						<Model:FillupEntry EntryDate="2/11/2007" FillAmount="9.228" OdometerReading="14486" PricePerUnit="2.269" PumpUnit="Gallon" OdometerUnit="Mile" />
+						<Model:FillupEntry EntryDate="2/12/2007" FillAmount="16.341" OdometerReading="14868" PricePerUnit="2.249" PumpUnit="Gallon" OdometerUnit="Mile" />
+						<Model:FillupEntry EntryDate="3/16/2007" FillAmount="17.696" OdometerReading="15159" PricePerUnit="2.499" PumpUnit="Gallon" OdometerUnit="Mile" />
+						<Model:FillupEntry EntryDate="4/7/2007" FillAmount="17.863" OdometerReading="15499" PricePerUnit="2.799" PumpUnit="Gallon" OdometerUnit="Mile" />
+						<Model:FillupEntry EntryDate="4/8/2007" FillAmount="10.141" OdometerReading="15738" PricePerUnit="2.759" PumpUnit="Gallon" OdometerUnit="Mile" />
+						<Model:FillupEntry EntryDate="4/19/2007" FillAmount="17.86" OdometerReading="16124" PricePerUnit="2.799" PumpUnit="Gallon" OdometerUnit="Mile" />
+						<Model:FillupEntry EntryDate="5/11/2007" FillAmount="16.411" OdometerReading="16438" PricePerUnit="3.199" PumpUnit="Gallon" OdometerUnit="Mile" />
+						<Model:FillupEntry EntryDate="5/18/2007" FillAmount="11.683" OdometerReading="16657" PricePerUnit="3.299" PumpUnit="Gallon" OdometerUnit="Mile" />
+						<Model:FillupEntry EntryDate="5/19/2007" FillAmount="8.541" OdometerReading="16830" PricePerUnit="3.399" PumpUnit="Gallon" OdometerUnit="Mile" />
+						<Model:FillupEntry EntryDate="6/14/2007" FillAmount="18.643" OdometerReading="17270" PricePerUnit="3.129" PumpUnit="Gallon" OdometerUnit="Mile" />
+						<Model:FillupEntry EntryDate="7/1/2007" FillAmount="17.615" OdometerReading="17638" PricePerUnit="3.039" PumpUnit="Gallon" OdometerUnit="Mile" />
+						<Model:FillupEntry EntryDate="7/14/2007" FillAmount="17.539" OdometerReading="17992" PricePerUnit="3.199" PumpUnit="Gallon" OdometerUnit="Mile" />
+						<Model:FillupEntry EntryDate="7/23/2007" FillAmount="16.787" OdometerReading="18290" PricePerUnit="3.189" PumpUnit="Gallon" OdometerUnit="Mile" />
+						<Model:FillupEntry EntryDate="7/24/2007" FillAmount="15.301" OdometerReading="18570" PricePerUnit="3.179" PumpUnit="Gallon" OdometerUnit="Mile" />
+						<Model:FillupEntry EntryDate="7/29/2007" FillAmount="18.109" OdometerReading="18982" PricePerUnit="2.969" PumpUnit="Gallon" OdometerUnit="Mile" />
+						<Model:FillupEntry EntryDate="7/31/2007" FillAmount="15.178" OdometerReading="19236" PricePerUnit="2.999" PumpUnit="Gallon" OdometerUnit="Mile" />
+						<Model:FillupEntry EntryDate="8/4/2007" FillAmount="17" OdometerReading="19552" PricePerUnit="2.999" PumpUnit="Gallon" OdometerUnit="Mile" />
+						<Model:FillupEntry EntryDate="8/11/2007" FillAmount="18.285" OdometerReading="19861" PricePerUnit="2.859" PumpUnit="Gallon" OdometerUnit="Mile" />
+						<Model:FillupEntry EntryDate="8/24/2007" FillAmount="15.873" OdometerReading="20218" PricePerUnit="3.099" PumpUnit="Gallon" OdometerUnit="Mile" />
+						<Model:FillupEntry EntryDate="9/1/2007" FillAmount="14.878" OdometerReading="20481" PricePerUnit="3.059" PumpUnit="Gallon" OdometerUnit="Mile" />
+						<Model:FillupEntry EntryDate="9/13/2007" FillAmount="17.605" OdometerReading="20847" PricePerUnit="2.939" PumpUnit="Gallon" OdometerUnit="Mile" />
+						<Model:FillupEntry EntryDate="9/23/2007" FillAmount="18.002" OdometerReading="21179" PricePerUnit="2.919" PumpUnit="Gallon" OdometerUnit="Mile" />
+						<Model:FillupEntry EntryDate="10/13/2007" FillAmount="18.703" OdometerReading="21554" PricePerUnit="2.969" PumpUnit="Gallon" OdometerUnit="Mile" />
+						<Model:FillupEntry EntryDate="11/9/2007" FillAmount="17.896" OdometerReading="21866" PricePerUnit="3.159" PumpUnit="Gallon" OdometerUnit="Mile" />
+						<Model:FillupEntry EntryDate="11/16/2007" FillAmount="14" OdometerReading="22172" PricePerUnit="3.219" PumpUnit="Gallon" OdometerUnit="Mile" />
+						<Model:FillupEntry EntryDate="12/9/2007" FillAmount="17.978" OdometerReading="22499" PricePerUnit="2.999" PumpUnit="Gallon" OdometerUnit="Mile" />
+						<Model:FillupEntry EntryDate="12/15/2007" FillAmount="14.851" OdometerReading="22785" PricePerUnit="2.989" PumpUnit="Gallon" OdometerUnit="Mile" />
+						<Model:FillupEntry EntryDate="12/21/2007" FillAmount="14.951" OdometerReading="23085" PricePerUnit="2.979" PumpUnit="Gallon" OdometerUnit="Mile" />
+						<Model:FillupEntry EntryDate="12/29/2007" FillAmount="9.775" OdometerReading="23242" PricePerUnit="3.099" PumpUnit="Gallon" OdometerUnit="Mile" />
+						<Model:FillupEntry EntryDate="1/1/2008" FillAmount="17.976" OdometerReading="23649" PricePerUnit="3.099" PumpUnit="Gallon" OdometerUnit="Mile" />
+						<Model:FillupEntry EntryDate="1/11/2008" FillAmount="15.735" OdometerReading="23952" PricePerUnit="3.099" PumpUnit="Gallon" OdometerUnit="Mile" />
+						<Model:FillupEntry EntryDate="1/12/2008" FillAmount="16.674" OdometerReading="24324" PricePerUnit="2.999" PumpUnit="Gallon" OdometerUnit="Mile" />
+						<Model:FillupEntry EntryDate="1/12/2008" FillAmount="16.286" OdometerReading="24669" PricePerUnit="3.099" PumpUnit="Gallon" OdometerUnit="Mile" />
+						<Model:FillupEntry EntryDate="1/13/2008" FillAmount="12.096" OdometerReading="24997" PricePerUnit="2.959" PumpUnit="Gallon" OdometerUnit="Mile" />
+						<Model:FillupEntry EntryDate="1/17/2008" FillAmount="17.972" OdometerReading="25356" PricePerUnit="2.949" PumpUnit="Gallon" OdometerUnit="Mile" />
+						<Model:FillupEntry EntryDate="1/17/2008" FillAmount="17.246" OdometerReading="25697" PricePerUnit="2.899" PumpUnit="Gallon" OdometerUnit="Mile" />
+						<Model:FillupEntry EntryDate="1/17/2008" FillAmount="18.004" OdometerReading="26080" PricePerUnit="2.899" PumpUnit="Gallon" OdometerUnit="Mile" />
+						<Model:FillupEntry EntryDate="1/19/2008" FillAmount="16.18" OdometerReading="26428" PricePerUnit="3.099" PumpUnit="Gallon" OdometerUnit="Mile" />
+						<Model:FillupEntry EntryDate="1/20/2008" FillAmount="15.494" OdometerReading="26736" PricePerUnit="2.999" PumpUnit="Gallon" OdometerUnit="Mile" />
+						<Model:FillupEntry EntryDate="1/21/2008" FillAmount="15.077" OdometerReading="27029" PricePerUnit="2.999" PumpUnit="Gallon" OdometerUnit="Mile" />
+						<Model:FillupEntry EntryDate="2/20/2008" FillAmount="15.19" OdometerReading="27266" PricePerUnit="2.959" PumpUnit="Gallon" OdometerUnit="Mile" />
+						<Model:FillupEntry EntryDate="2/22/2008" FillAmount="16.251" OdometerReading="27539" PricePerUnit="3.075" PumpUnit="Gallon" OdometerUnit="Mile" />
+						<Model:FillupEntry EntryDate="3/17/2008" FillAmount="17.556" OdometerReading="27856" PricePerUnit="3.299" PumpUnit="Gallon" OdometerUnit="Mile" />
+						<Model:FillupEntry EntryDate="3/23/2008" FillAmount="17.16" OdometerReading="28207" PricePerUnit="3.299" PumpUnit="Gallon" OdometerUnit="Mile" />
+						<Model:FillupEntry EntryDate="4/5/2008" FillAmount="15.862" OdometerReading="28536" PricePerUnit="3.339" PumpUnit="Gallon" OdometerUnit="Mile" />
+						<Model:FillupEntry EntryDate="4/17/2008" FillAmount="7.199" OdometerReading="28680" PricePerUnit="3.479" PumpUnit="Gallon" OdometerUnit="Mile" PreviousEntryMissed="True" />
+						<Model:FillupEntry EntryDate="4/22/2008" FillAmount="16.8" OdometerReading="29017" PricePerUnit="3.659" PumpUnit="Gallon" OdometerUnit="Mile" />
+					</Model:Vehicle.Entries>
+				</Model:Vehicle>
+			</ViewModels:VehicleSummaryViewModel.Vehicle>
+		</ViewModels:VehicleSummaryViewModel>
+
+	</ViewModels:MainViewModel.VehiclePages>
+
+</ViewModels:MainViewModel>
